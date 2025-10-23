@@ -25,4 +25,3 @@ jobs:
           local-dir: ./            # Dossier à envoyer
           method: ftp
           timeout: 600
-            git-ftp-args: --insecure  # Option pour ignorer les erreurs SSL si nécessaire
