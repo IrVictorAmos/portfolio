@@ -46,8 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 3px;
+            box-sizing: border-box;
         }
-        .formulaire-connexion button {
+        .formulaire-connexion button,
+        #valider-code {
             width: 100%;
             padding: 10px;
             background-color: #007bff;
@@ -55,8 +57,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             border: none;
             border-radius: 3px;
             cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
         }
-        .formulaire-connexion button:hover {
+        .formulaire-connexion button:hover,
+        #valider-code:hover {
             background-color: #0056b3;
         }
         .erreur {
@@ -65,6 +70,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         .contenu-principal {
             display: none;
+        }
+        #code-secret-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -100,30 +113,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
 
     <script>
-        // Code secret d��fini en PHP
+        // Code secret défini en PHP
         const codeSecret = '<?php echo CODE_SECRET; ?>';
 
-        // Fonction pour valider le code secret
-        function validerCodeSecret() {
-            const inputCode = document.getElementById('code-secret-input').value;
-            const erreurDiv = document.getElementById('erreur-code');
+        // Attendre que le DOM soit complètement chargé
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fonction pour valider le code secret
+            function validerCodeSecret() {
+                const inputCode = document.getElementById('code-secret-input').value;
+                const erreurDiv = document.getElementById('erreur-code');
 
-            if (inputCode === codeSecret) {
-                // Cacher le modal et afficher le contenu principal
-                document.getElementById('modal-code-secret').classList.remove('active');
-                document.getElementById('contenu-principal').style.display = 'block';
-            } else {
-                erreurDiv.textContent = 'Code secret incorrect.';
+                console.log('Code entré:', inputCode);
+                console.log('Code secret:', codeSecret);
+
+                if (inputCode === codeSecret) {
+                    // Cacher le modal et afficher le contenu principal
+                    document.getElementById('modal-code-secret').classList.remove('active');
+                    document.getElementById('contenu-principal').style.display = 'block';
+                    erreurDiv.textContent = '';
+                } else {
+                    erreurDiv.textContent = 'Code secret incorrect.';
+                }
             }
-        }
 
-        // Événement pour le bouton valider
-        document.getElementById('valider-code').addEventListener('click', validerCodeSecret);
+            // Événement pour le bouton valider
+            const btnValider = document.getElementById('valider-code');
+            if (btnValider) {
+                btnValider.addEventListener('click', validerCodeSecret);
+            }
 
-        // Permettre la validation avec Enter
-        document.getElementById('code-secret-input').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                validerCodeSecret();
+            // Permettre la validation avec Enter
+            const inputCode = document.getElementById('code-secret-input');
+            if (inputCode) {
+                inputCode.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        validerCodeSecret();
+                    }
+                });
             }
         });
     </script>
