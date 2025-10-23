@@ -21,7 +21,12 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
-          server-dir: /htdocs/     # Dossier cible sur le serveur
-          local-dir: ./            # Dossier à envoyer
-          method: ftp
+          protocol: ftp
+          local-dir: ./            # Ton code local
+          server-dir: /htdocs/     # Dossier public d’InfinityFree
           timeout: 600
+          exclude: |
+            **/.git*
+            **/.github/**
+            **/node_modules/**
+            **/vendor/**
