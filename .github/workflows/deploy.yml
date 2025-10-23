@@ -1,0 +1,28 @@
+name: 🚀 Déploiement Automatique vers InfinityFree
+
+on:
+  push:
+    branches:
+      - main   # Déploie à chaque push sur la branche main
+
+jobs:
+  ftp-deploy:
+    name: 📦 Déploiement via FTP
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Récupération du code
+        uses: actions/checkout@v3
+
+      - name: 🔁 Déploiement FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: ${{ secrets.FTP_PORT }}
+          server-dir: /htdocs/     # Dossier cible sur le serveur
+          local-dir: ./            # Dossier à envoyer
+          method: ftp
+          timeout: 600
+            git-ftp-args: --insecure  # Option pour ignorer les erreurs SSL si nécessaire
