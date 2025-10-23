@@ -1,0 +1,28 @@
+# ============================================
+# MINIMAL .HTACCESS FOR WAMP
+# Use this if you get Internal Server Error
+# Rename to .htaccess to use
+# ============================================
+
+# Enable mod_rewrite
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+</IfModule>
+
+# Set default index file
+DirectoryIndex index.html index.htm
+
+# Disable directory listing
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
+
+# Basic MIME types
+<IfModule mod_mime.c>
+    AddType application/javascript js
+    AddType application/json json
+    AddType image/svg+xml svg
+    AddType font/woff woff
+    AddType font/woff2 woff2
+</IfModule>

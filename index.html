@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez mes services en développement web sur mesure à Bukavu, RDC.">
+    <meta name="keywords" content="ingénieur informatique, développement logiciel, Bukavu, RDC, portfolio, Victor Amos, développeur web, applications sur mesure, PHP, Tailwind, intelligence artificielle, Bukavu">
+    <meta name="author" content="Victor Amos">
+    <meta name="theme-color" content="#0D1117">
+    <meta property="og:title" content="Victor Amos - Ingénieur Informatique & Innovateur Digital">
+    <meta property="og:description" content="Découvrez mes réalisations en développement web, IA et automatisation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://victoramos.is-great.net">
+    <meta property="og:image" content="https://victoramos.is-great.net/image/profile.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Victor Amos - Ingénieur Informatique">
+    <meta name="twitter:description" content="Portfolio professionnel - Développement Web & Solutions Logicielles">
+    <meta name="twitter:image" content="https://victoramos.is-great.net/image/profile.jpg">
+    <link rel="canonical" href="https://victoramos.is-great.net">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='75' font-size='75' font-weight='bold' fill='%2300B4D8'>VA</text></svg>">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect fill='%230D1117' width='180' height='180'/><text x='90' y='135' font-size='100' font-weight='bold' fill='%2300B4D8' text-anchor='middle'>VA</text></svg>">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Victor Amos">
+    <title>Victor Amos - Ingénieur Informatique | Portfolio Professionnel</title>
+    <link rel="stylesheet" href="styles.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="modals.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <meta name="robots" content="index, follow">
+    <!-- <meta name="language" content="fr"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="copyright" content="© 2025 Victor Amos">
+
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Victor Amos",
+  "alternateName": "CIGWATI KAMOLE Amos",
+  "jobTitle": "Ingénieur Informatique et Développeur Web",
+  "url": "https://victoramos.is-great.net",
+  "image": "https://victoramos.is-great.net/images/profile.jpg",
+  "sameAs": [
+    "https://github.com/victoramos",
+    "https://www.linkedin.com/in/victoramos"
+  ],
+  "description": "Je conçois des solutions web et logicielles modernes, performantes et adaptées aux besoins des entreprises.",
+  "knowsAbout": [
+    "Développement web",
+    "PHP",
+    "Tailwind CSS",
+    "React",
+    "Node.js",
+    "JavaScript",
+    "Bases de données",
+    "Architecture logicielle",
+    "Angular",
+    "Bootstrap",
+    "Intelligence artificielle"
+  ],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Bukavu",
+    "addressCountry": "CD"
+  }
+}
+</script>
+
+</head>
+<body>
+    <!-- LOADER -->
+    <div class="loader-container" id="loaderContainer">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="gradientLoader" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" style="stop-color:#00B4D8;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#7B2CBF;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#gradientLoader)" stroke-width="2" class="loader-circle-1"/>
+                    <circle cx="50" cy="50" r="35" fill="none" stroke="url(#gradientLoader)" stroke-width="2" class="loader-circle-2"/>
+                    <text x="50" y="55" text-anchor="middle" font-size="24" font-weight="bold" fill="url(#gradientLoader)" class="loader-text">VA</text>
+                </svg>
+            </div>
+            <div class="loader-text-content">
+                <p class="loader-label" data-en="Loading" data-fr="Chargement">Chargement</p>
+                <div class="loader-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">VA</span>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link" data-en="Home" data-fr="Accueil">Accueil</a>
+                <a href="#about" class="nav-link" data-en="About" data-fr="À propos">À propos</a>
+                <a href="#skills" class="nav-link" data-en="Skills" data-fr="Compétences">Compétences</a>
+                <a href="#projects" class="nav-link" data-en="Projects" data-fr="Projets">Projets</a>
+                <a href="#contact" class="nav-link" data-en="Contact" data-fr="Contact">Contact</a>
+            </div>
+            <div class="nav-controls">
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="language-toggle" id="languageToggle" title="Toggle language">
+                    <span>FR</span>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-lamp"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-en="Victor Amos" data-fr="Victor Amos">Victor Amos</h1>
+            <p class="hero-subtitle" data-en="Software Engineer & Digital Innovator" data-fr="Ingénieur Informatique & Innovateur Digital">Ingénieur Informatique & Innovateur Digital</p>
+            <p class="hero-description" data-en="Based in Bukavu, DRC | Specialized in Web Development & Software Solutions" data-fr="Basé à Bukavu, RDC | Spécialisé en Développement Web & Solutions Logicielles">Basé à Bukavu, RDC | Spécialisé en Développement Web & Solutions Logicielles</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary" data-en="View My Work" data-fr="Voir mes projets">Voir mes projets</a>
+                <a href="#contact" class="btn btn-secondary" data-en="Get in Touch" data-fr="Me contacter">Me contacter</a>
+            </div>
+            <div class="hero-scroll">
+                <span data-en="Scroll to explore" data-fr="Défilez pour explorer">Défilez pour explorer</span>
+                <div class="scroll-icon">
+                    <div class="scroll-wheel"></div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-en="About Me" data-fr="À propos de moi">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="images/profile.jpg" alt="Victor Amos" class="profile-image">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3 data-en="CIGWATI KAMOLE Amos" data-fr="CIGWATI KAMOLE Amos">CIGWATI KAMOLE Amos</h3>
+                    <p class="about-subtitle" data-en="Bachelor's Degree in Information Management" data-fr="Licencié en Informatique de Gestion">Licencié en Informatique de Gestion</p>
+                    <p class="about-description" data-en="I'm a passionate software engineer with a strong foundation in information management. Based in Bukavu, DRC, I specialize in creating elegant, efficient digital solutions that solve real-world problems. With expertise in web development, software architecture, and modern technologies, I'm committed to delivering high-quality projects that exceed expectations." data-fr="Je suis un ingénieur logiciel passionné avec une solide formation en informatique de gestion. Basé à Bukavu, RDC, je me spécialise dans la création de solutions numériques élégantes et efficaces qui résolvent des problèmes concrets. Avec une expertise en développement web, architecture logicielle et technologies modernes, je m'engage à livrer des projets de haute qualité qui dépassent les attentes.">Je suis un ingénieur logiciel passionné avec une solide formation en informatique de gestion. Basé à Bukavu, RDC, je me spécialise dans la création de solutions numériques élégantes et efficaces qui résolvent des problèmes concrets. Avec une expertise en développement web, architecture logicielle et technologies modernes, je m'engage à livrer des projets de haute qualité qui dépassent les attentes.</p>
+                    <div class="ai-badge">
+                        <i class="fas fa-brain"></i>
+                        <span data-en="AI-Powered Solutions" data-fr="Solutions Alimentées par l'IA">Solutions Alimentées par l'IA</span>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <p>Plus de </p><span class="stat-number">5</span>
+                            <span class="stat-label" data-en="Projects" data-fr="Projets">Projets</span>
+                        </div>
+                        <div class="stat">
+                            <p>Plus de </p><span class="stat-number">2 +</span>
+                            <span class="stat-label" data-en="Years Experience" data-fr="Ans d'expérience">Ans d'expérience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100 </span><p>%</p>
+                            <span class="stat-label" data-en="Satisfaction" data-fr="Satisfaction">Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-en="Skills & Expertise" data-fr="Compétences & Expertise">Compétences & Expertise</h2>
+            <div class="skills-grid">
+                <!-- Frontend -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 data-en="Frontend Development" data-fr="Développement Frontend">Développement Frontend</h3>
+                    <p data-en="HTML, CSS, JavaScript, React, Responsive Design" data-fr="HTML, CSS, JavaScript, React, Design Responsive">HTML, CSS, JavaScript, React, Design Responsive</p>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 data-en="Backend Development" data-fr="Développement Backend">Développement Backend</h3>
+                    <p data-en="PHP, Java, API REST, Laravel" data-fr="PHP, Java, API REST, Laravel">PHP, Java, API REST, Laravel</p>
+                </div>
+
+                <!-- Database -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3 data-en="Database Design" data-fr="Conception de Base de Données">Conception de Base de Données</h3>
+                    <p data-en="MySQL, SQLite, Data Architecture" data-fr="MySQL, SQLite, Architecture des Données">MySQL, SQLite, Architecture des Données</p>
+                </div>
+
+                <!-- UI/UX -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 data-en="UI/UX Design" data-fr="Design UI/UX">Design UI/UX</h3>
+                    <p data-en="Figma, Adobe XD, User Experience, Interface Design, Prototyping" data-fr="Figma, Adobe XD, Expérience Utilisateur, Design d'Interface, Prototypage">Figma, Adobe XD, Expérience Utilisateur, Design d'Interface, Prototypage</p>
+                </div>
+
+                <!-- DevOps -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 data-en="DevOps & Tools" data-fr="DevOps & Outils">DevOps & Outils</h3>
+                    <p data-en="Git, Docker, CI/CD, AWS, Deployment" data-fr="Git, Docker, CI/CD, AWS, Déploiement">Git, Docker, CI/CD, AWS, Déploiement</p>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 data-en="Soft Skills" data-fr="Compétences Transversales">Compétences Transversales</h3>
+                    <p data-en="Problem Solving, Team Leadership, Communication, Project Management" data-fr="Résolution de Problèmes, Leadership, Communication, Gestion de Projets">Résolution de Problèmes, Leadership, Communication, Gestion de Projets</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title" data-en="Featured Projects" data-fr="Projets en Vedette">Projets en Vedette</h2>
+            <div class="projects-grid">
+                <!-- Project 1 - Application web de gestion commerciale -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00B4D8;stop-opacity:1" /><stop offset="100%" style="stop-color:#7B2CBF;stop-opacity:1" /></linearGradient></defs><rect width="400" height="250" fill="url(#grad1)"/><text x="200" y="125" font-size="24" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">Gestion Commerciale</text></svg>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" data-en="View Project" data-fr="Voir le projet">Voir le projet</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-en="Commercial Management App" data-fr="Application web de gestion commerciale">Application web de gestion commerciale</h3>
+                        <p data-en="Complete commercial management solution with inventory, sales tracking, and reporting." data-fr="Solution complète de gestion commerciale avec inventaire, suivi des ventes et rapports.">Solution complète de gestion commerciale avec inventaire, suivi des ventes et rapports.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>Dashboard</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 - Plateforme e-commerce -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;"><defs><linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#7B2CBF;stop-opacity:1" /><stop offset="100%" style="stop-color:#00B4D8;stop-opacity:1" /></linearGradient></defs><rect width="400" height="250" fill="url(#grad2)"/><text x="200" y="125" font-size="24" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">E-Commerce</text></svg>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" data-en="View Project" data-fr="Voir le projet">Voir le projet</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-en="E-Commerce Platform" data-fr="Plateforme e-commerce">Plateforme e-commerce</h3>
+                        <p data-en="Full-stack e-commerce solution with payment integration, inventory management, and admin dashboard." data-fr="Solution e-commerce complète avec intégration de paiement, gestion des stocks et tableau de bord administrateur.">Solution e-commerce complète avec intégration de paiement, gestion des stocks et tableau de bord administrateur.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MySQL</span>
+                            <span>Cinet pay</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - Gestion CRM -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;"><defs><linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#00B4D8;stop-opacity:1" /><stop offset="100%" style="stop-color:#7B2CBF;stop-opacity:1" /></linearGradient></defs><rect width="400" height="250" fill="url(#grad3)"/><text x="200" y="125" font-size="24" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">CRM Client</text></svg>
+                        <div class="project-overlay">
+                            <a href="#" class="project-link" data-en="View Project" data-fr="Voir le projet">Voir le projet</a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 data-en="CRM Client Management" data-fr="Gestion CRM de relation client">Gestion CRM de relation client</h3>
+                        <p data-en="Customer relationship management system with contact tracking, sales pipeline, and analytics." data-fr="Système de gestion de la relation client avec suivi des contacts, pipeline de ventes et analytique.">Système de gestion de la relation client avec suivi des contacts, pipeline de ventes et analytique.</p>
+                        <div class="project-tags">
+                            <span>PHP</span>
+                            <span>Laravel</span>
+                            <span>MySQL</span>
+                            <span>API REST</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-footer">
+                <button class="btn btn-secondary" id="moreProjectsBtn" data-en="View More Projects" data-fr="Voir plus de projets">Voir plus de projets</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-en="Get In Touch" data-fr="Me Contacter">Me Contacter</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 data-en="Let's work together" data-fr="Travaillons ensemble">Travaillons ensemble</h3>
+                    <p data-en="I'm always interested in hearing about new projects and opportunities. Feel free to reach out!" data-fr="Je suis toujours intéressé par de nouveaux projets et opportunités. N'hésitez pas à me contacter !">Je suis toujours intéressé par de nouveaux projets et opportunités. N'hésitez pas à me contacter !</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <p class="method-label" data-en="Email" data-fr="Email">Email</p>
+                                <a href="mailto:irvictoramos@gmail.com">irvictoramos@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <p class="method-label" data-en="Phone" data-fr="Téléphone">Téléphone</p>
+                                <div class="phone-numbers">
+                                    <a href="tel:+243907805166">+243 907805166</a>
+                                    <a href="tel:+243843911985">+243 843911985</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p class="method-label" data-en="Location" data-fr="Localisation">Localisation</p>
+                                <p>Bukavu, Democratic Republic of Congo</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/victoramos" class="social-link" title="LinkedIn" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/victorAmos12" class="social-link" title="GitHub" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Your Name" class="form-input" required data-en-placeholder="Your Name" data-fr-placeholder="Votre Nom">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Your Email" class="form-input" required data-en-placeholder="Your Email" data-fr-placeholder="Votre Email">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" placeholder="Subject" class="form-input" required data-en-placeholder="Subject" data-fr-placeholder="Sujet">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" placeholder="Your Message" class="form-textarea" rows="5" required data-en-placeholder="Your Message" data-fr-placeholder="Votre Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-en="Send Message" data-fr="Envoyer le message">Envoyer le message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Victor Amos</h4>
+                    <p data-en="Software Engineer & Digital Innovator" data-fr="Ingénieur Informatique & Innovateur Digital">Ingénieur Informatique & Innovateur Digital</p>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Quick Links" data-fr="Liens Rapides">Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#home" data-en="Home" data-fr="Accueil">Accueil</a></li>
+                        <li><a href="#about" data-en="About" data-fr="À propos">À propos</a></li>
+                        <li><a href="#projects" data-en="Projects" data-fr="Projets">Projets</a></li>
+                        <li><a href="#contact" data-en="Contact" data-fr="Contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 data-en="Follow Me" data-fr="Me Suivre">Me Suivre</h4>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-stats">
+                <div class="stat-item">
+                    <span class="stat-label" data-en="Today" data-fr="Aujourd'hui">Aujourd'hui</span>
+                    <span class="stat-value" id="todayVisits">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label" data-en="This Month" data-fr="Ce mois">Ce mois</span>
+                    <span class="stat-value" id="monthVisits">0</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-label" data-en="Total" data-fr="Total">Total</span>
+                    <span class="stat-value" id="totalVisits">0</span>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-en="© 2024 Victor Amos. All rights reserved." data-fr="© 2024 Victor Amos. Tous droits réservés.">© 2024 Victor Amos. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- PROJECT DEMO MODAL -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <h2 data-en="Project Demo" data-fr="Démo du Projet">Démo du Projet</h2>
+            </div>
+            <div class="modal-body">
+                <p data-en="Thank you for your interest in this project!" data-fr="Merci de votre intérêt pour ce projet !">Merci de votre intérêt pour ce projet !</p>
+                <p data-en="To schedule a demo or discuss this application in detail, please contact Victor Amos directly." data-fr="Pour planifier une démo ou discuter de cette application en détail, veuillez contacter Victor Amos directement.">Pour planifier une démo ou discuter de cette application en détail, veuillez contacter Victor Amos directement.</p>
+                <div class="modal-contact-info">
+                    <p><strong data-en="Email:" data-fr="Email :">Email :</strong> <a href="mailto:irvictoramos@gmail.com">irvictoramos@gmail.com</a></p>
+                    <p><strong data-en="Phone:" data-fr="Téléphone :">Téléphone :</strong></p>
+                    <ul>
+                        <li><a href="tel:+243907805166">+243 907805166</a></li>
+                        <li><a href="tel:+243843911985">+243 843911985</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="modalCloseBtn" data-en="Close" data-fr="Fermer">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MORE PROJECTS MODAL -->
+    <div class="modal" id="moreProjectsModal">
+        <div class="modal-content">
+            <button class="modal-close" id="moreProjectsClose">&times;</button>
+            <div class="modal-header">
+                <h2 data-en="More Projects" data-fr="Plus de Projets">Plus de Projets</h2>
+            </div>
+            <div class="modal-body">
+                <p data-en="All projects are not currently available on this portfolio." data-fr="Tous les projets ne sont pas actuellement disponibles sur ce portfolio.">Tous les projets ne sont pas actuellement disponibles sur ce portfolio.</p>
+                <p data-en="However, I have completed more than 5 projects with 100% client satisfaction. To learn more about my complete portfolio and discuss your project needs, please get in touch!" data-fr="Cependant, j'ai complété plus de 5 projets avec 100% de satisfaction client. Pour en savoir plus sur mon portefeuille complet et discuter de vos besoins en matière de projet, veuillez me contacter !">Cependant, j'ai complété plus de 5 projets avec 100% de satisfaction client. Pour en savoir plus sur mon portefeuille complet et discuter de vos besoins en matière de projet, veuillez me contacter !</p>
+                <div class="modal-contact-info">
+                    <p><strong data-en="Email:" data-fr="Email :">Email :</strong> <a href="mailto:irvictoramos@gmail.com">irvictoramos@gmail.com</a></p>
+                    <p><strong data-en="Phone:" data-fr="Téléphone :">Téléphone :</strong></p>
+                    <ul>
+                        <li><a href="tel:+243907805166">+243 907805166</a></li>
+                        <li><a href="tel:+243843911985">+243 843911985</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="moreProjectsCloseBtn" data-en="Close" data-fr="Fermer">Fermer</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "CIGWATI KAMOLE Amos",
+      "alternateName": "Victor Amos",
+      "url": "https://victoramos.dev",
+      "image": "https://via.placeholder.com/300x300?text=Victor+Amos",
+      "description": "Software Engineer & Digital Innovator - Ingénieur Informatique spécialisé en développement web et solutions logicielles",
+      "jobTitle": "Software Engineer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Freelance"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bukavu",
+        "addressCountry": "CD"
+      },
+      "sameAs": [
+        "https://linkedin.com/in/victoramos",
+        "https://github.com/victoramos",
+        "https://twitter.com/victoramos"
+      ],
+      "knowsAbout": [
+        "Web Development",
+        "Software Engineering",
+        "Frontend Development",
+        "Backend Development",
+        "Database Design",
+        "UI/UX Design",
+        "DevOps",
+        "JavaScript",
+        "React",
+        "Node.js"
+      ],
+      "email": "victor.amos@example.com",
+      "telephone": "+243123456789"
+    }
+    </script>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js?v=<?php echo time(); ?>" defer></script>
+</body>
+</html>

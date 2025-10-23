@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://victoramos.is-great.net/sitemap.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
